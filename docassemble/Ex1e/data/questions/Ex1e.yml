@@ -1,0 +1,21 @@
+---
+question: Personal Attributes
+subquestion: |
+  Please enter your full name and age.
+fields:
+  - Full Name: clientName
+  - Age: clientAge
+---
+question: Simplified Age Calculator
+subquestion: |
+  <%
+  if int(clientAge) < 18:
+    message = 'just a child!'
+  elif int(clientAge) > 65:
+    message = 'an adult and are eligible for the age pension'
+  else:
+    message = 'an adult'
+  %>
+  Hello **${clientName}**, you are ${ message }.
+mandatory: True
+---
